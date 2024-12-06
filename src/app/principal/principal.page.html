@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <div class="header-content">
+        <span>L'Barbero</span>
+        <small>Estilo & Elegancia</small>
+      </div>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Hero Banner -->
+  <div class="banner interactive-element">
+    <ion-img src="assets/images/login.svg"></ion-img>
+    <div class="banner-overlay">
+      <h1>Transforma tu Estilo</h1>
+      <p>Cortes modernos, servicio tradicional</p>
+    </div>
+  </div>
+
+  <!-- Quick Actions Grid -->
+  <div class="quick-actions">
+    <ion-card class="interactive-element" (click)="goToSchedulePage()">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="calendar-outline"></ion-icon>
+          Agendar Cita
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Reserva con tu barbero favorito
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="interactive-element" (click)="goToBarbersPage()">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="people-outline"></ion-icon>
+          Nuestros Barberos
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Conoce a nuestro equipo de profesionales
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="interactive-element" (click)="goToCommentsPage()">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="chatbubble-outline"></ion-icon>
+          Comentarios
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Comparte tu experiencia
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Services Preview -->
+  <ion-card class="services-preview">
+    <ion-card-header>
+      <ion-card-title>Nuestros Servicios</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="service-list">
+        <div class="service-item">Corte Clásico</div>
+        <div class="service-item">Corte Moderno</div>
+        <div class="service-item">Barba</div>
+        <div class="service-item">Color</div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button href="https://facebook.com/lbarbero" target="_blank">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+      <ion-button href="https://instagram.com/lbarbero" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-button>
+      <ion-button href="https://twitter.com/lbarbero" target="_blank">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

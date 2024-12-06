@@ -1,0 +1,43 @@
+<ion-content class="ion-padding">
+  <ion-img src="assets/images/login.svg"></ion-img>
+
+  <!-- Formulario basado en template-driven (usando ngModel) -->
+  <form (ngSubmit)="login()">
+    
+    <!-- Correo electrónico -->
+    <ion-item class="ion-margin-top">
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input 
+        [(ngModel)]="loginData.email" 
+        name="email" 
+        type="email" 
+        placeholder="Introduce tu correo electrónico" 
+        required>
+      </ion-input>
+    </ion-item>
+
+    <!-- Contraseña -->
+    <ion-item class="ion-margin-top">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input 
+        [(ngModel)]="loginData.password" 
+        name="password" 
+        type="password" 
+        placeholder="Introduce tu contraseña" 
+        required>
+      </ion-input>
+    </ion-item>
+
+    <!-- Botón de Login -->
+    <ion-button 
+      class="ion-margin-top" 
+      expand="block" 
+      type="submit" 
+      [disabled]="!loginData.email || !loginData.password">
+      Ingresar
+    </ion-button>
+    <div class="ion-text-center ion-margin-top">
+      <p>¿No tienes cuenta? <ion-router-link routerLink="/register">¡Haz tu cuenta aquí!</ion-router-link></p>
+    </div>
+  </form>
+</ion-content>

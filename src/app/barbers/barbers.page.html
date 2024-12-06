@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <div class="header-content">
+        <span>L'Barbero</span>
+        <small>Nuestros Profesionales</small>
+      </div>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="barbers-container">
+    <ion-card *ngFor="let barber of barbers" (click)="showBarberDetails(barber)" class="interactive-element">
+      <div class="barber-profile">
+        <div class="profile-placeholder">
+          <ion-icon name="person"></ion-icon>
+        </div>
+        <h2>{{ barber.username }}</h2>
+        <div class="barber-rating">
+          <ion-icon 
+            *ngFor="let _ of [].constructor(Math.round(barber.rating))" 
+            name="star" 
+            color="warning"
+          ></ion-icon>
+          <ion-icon 
+            *ngFor="let _ of [].constructor(5 - Math.round(barber.rating))" 
+            name="star-outline" 
+            color="medium"
+          ></ion-icon>
+        </div>
+        <p>{{ barber.specialty }}</p>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

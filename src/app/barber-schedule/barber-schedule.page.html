@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis Citas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <full-calendar [options]="calendarOptions"></full-calendar>
+  
+  <ion-list *ngIf="selectedDayAppointments.length > 0" class="appointment-details">
+    <ion-list-header>
+      <ion-label>Detalles de Citas</ion-label>
+    </ion-list-header>
+    
+    <ion-item *ngFor="let apt of selectedDayAppointments">
+      <ion-label>
+        <h2>Cliente: {{ apt.client }}</h2>
+        <p>Fecha: {{ apt.date }}</p>
+        <p>Hora: {{ apt.time }}</p>
+        <p>Descripción: {{ apt.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,51 @@
+page-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--barbershop-light);
+  
+    .register-container {
+      width: 90%;
+      max-width: 450px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 30px;
+      
+      h1 {
+        text-align: center;
+        color: var(--barbershop-dark);
+        margin-bottom: 25px;
+      }
+      
+      ion-item {
+        --background: var(--barbershop-light);
+        --border-radius: 10px;
+        margin-bottom: 15px;
+        
+        ion-icon {
+          color: var(--barbershop-dark);
+          margin-right: 10px;
+        }
+      }
+      
+      ion-button {
+        --background: var(--barbershop-gold);
+        --color: var(--barbershop-dark);
+        text-transform: none;
+        font-weight: 600;
+        margin-top: 20px;
+      }
+      
+      .login-link {
+        text-align: center;
+        margin-top: 15px;
+        
+        a {
+          color: var(--barbershop-dark);
+          text-decoration: none;
+        }
+      }
+    }
+  }

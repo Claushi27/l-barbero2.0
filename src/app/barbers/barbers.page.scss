@@ -1,0 +1,79 @@
+.barbers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+  
+    ion-card {
+      width: 45%;
+      margin: 10px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+  
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      }
+  
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  
+    .barber-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+  
+      h2 {
+        margin: 10px 0;
+        color: var(--barbershop-dark);
+        font-weight: 600;
+      }
+  
+      p {
+        color: var(--ion-color-medium);
+        font-style: italic;
+      }
+    }
+  
+    .profile-placeholder {
+      background-color: var(--barbershop-light);
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  
+      ion-icon {
+        font-size: 60px;
+        color: var(--ion-color-medium);
+      }
+    }
+  
+    .barber-rating {
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  // Estilos para el alert personalizado
+  .custom-alert {
+    .barber-details-alert {
+      text-align: left;
+      
+      p {
+        margin: 10px 0;
+        color: var(--barbershop-dark);
+      }
+  
+      strong {
+        color: var(--barbershop-gold);
+      }
+    }
+  }

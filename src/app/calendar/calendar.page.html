@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="calendar-container">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+
+  <ion-modal [isOpen]="showForm">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Agendar Cita en L'Barbero</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="cancelAppointment()">Cancelar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Servicio</ion-label>
+            <ion-select [(ngModel)]="appointmentDescription">
+              <ion-select-option value="Corte de Pelo">Corte de Pelo</ion-select-option>
+              <ion-select-option value="Barba">Barba</ion-select-option>
+              <ion-select-option value="Corte de Pelo + Barba">Corte de Pelo + Barba</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Barbero</ion-label>
+            <ion-select [(ngModel)]="selectedBarber">
+              <ion-select-option *ngFor="let barber of barbers" [value]="barber">
+                {{ barber }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Hora</ion-label>
+            <ion-select [(ngModel)]="appointmentTime">
+              <ion-select-option *ngFor="let time of availableTimes" [value]="time">
+                {{ time }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+        <ion-button expand="block" (click)="addAppointment()">Agendar Cita</ion-button>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

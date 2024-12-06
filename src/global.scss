@@ -1,5 +1,6 @@
 /*
  * App Global CSS
+ 
  * ----------------------------------------------------------------------------
  * Put style rules here that you want to apply globally. These styles are for
  * the entire app and not just one component. Additionally, this file can be
@@ -35,3 +36,75 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+:root {
+    --ion-color-primary: #2c3e50;       // Dark Navy Blue
+    --ion-color-primary-rgb: 44,62,80;
+    --ion-color-primary-contrast: #fff;
+    --ion-color-primary-contrast-rgb: 255,255,255;
+    --ion-color-primary-shade: #263343;
+    
+    --ion-color-secondary: #34495e;     // Slightly Lighter Navy
+    --ion-color-secondary-rgb: 52,73,94;
+    
+    --ion-color-tertiary: #7f8c8d;      // Cool Gray
+    --ion-color-tertiary-rgb: 127,140,141;
+    
+    --barbershop-gold: #d4af37;         // Elegant Gold
+    --barbershop-dark: #1a1a1a;         // Deep Black
+    --barbershop-light: #f4f4f4;        // Soft Light Gray
+  }
+  
+  body {
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+    background-color: var(--barbershop-light);
+  }
+  
+  // Smooth Transitions
+  .interactive-element {
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  }
+  
+  // Card Styling
+  ion-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 15px;
+    background-color: white;
+    
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  }
+  
+  // Typography
+  ion-title {
+    font-weight: 700;
+    color: var(--barbershop-dark);
+  }
+  
+  // Footer Styling
+  ion-footer {
+    background-color: var(--ion-color-primary);
+    color: white;
+  }
+  
+  // Button Styling
+  ion-button {
+    --background: var(--barbershop-gold);
+    --color: var(--barbershop-dark);
+    text-transform: none;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  
+  // Icon Styling
+  ion-icon {
+    color: var(--barbershop-gold);
+    font-size: 24px;
+  }

@@ -1,0 +1,98 @@
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  
+    // Estilo para el formulario de comentarios
+    .comment-form {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 15px;
+  
+      ion-item {
+        --padding-start: 0;
+        --inner-padding-end: 0;
+        margin-bottom: 10px;
+      }
+  
+      ion-button {
+        margin-top: 10px;
+        --background: var(--barbershop-gold);
+        --color: var(--barbershop-dark);
+        text-transform: none;
+      }
+    }
+  
+    // Estilo para lista de comentarios
+    .comment-list {
+      ion-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 15px;
+        transition: all 0.3s ease-in-out;
+  
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+        }
+      }
+  
+      .comment-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: var(--barbershop-light);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+  
+        .username {
+          font-weight: 600;
+          color: var(--barbershop-dark);
+        }
+  
+        .date {
+          color: var(--ion-color-medium);
+          font-size: 0.8em;
+        }
+      }
+  
+      .comment-content {
+        padding: 10px 15px;
+  
+        .rating {
+          display: flex;
+          margin-bottom: 10px;
+  
+          ion-icon {
+            color: var(--barbershop-gold);
+            margin-right: 2px;
+          }
+        }
+  
+        p {
+          color: var(--barbershop-dark);
+          line-height: 1.5;
+        }
+      }
+    }
+  
+    // Estilo para rango de calificación
+    ion-range {
+      --bar-background: var(--barbershop-light);
+      --bar-background-active: var(--barbershop-gold);
+      --knob-background: var(--barbershop-gold);
+      --knob-border-radius: 50%;
+    }
+  
+    // Placeholder cuando no hay comentarios
+    .no-comments {
+      text-align: center;
+      color: var(--ion-color-medium);
+      padding: 20px;
+      background-color: var(--barbershop-light);
+      border-radius: 12px;
+    }
+  }
